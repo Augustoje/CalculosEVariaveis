@@ -42,14 +42,17 @@ namespace MenuEcalculos
 
                         Console.Write("\n{0}, voce está", nome);
 
-                        if (imc < 20) {
+                        if (imc < 20)
+                        {
                             Console.WriteLine(" abaixo do Peso!!!");
                         }
 
-                        if (imc >= 20 && imc < 25) {
+                        if (imc >= 20 && imc < 25)
+                        {
                             Console.WriteLine(" com o peso Ideal!!!");
                         }
-                        else if (imc >= 25) {
+                        else if (imc >= 25)
+                        {
                             Console.WriteLine(" acima do Peso!!!");
                         }
                         Console.WriteLine("\n \n \nPressione Enter para voltar ao Menu");
@@ -68,7 +71,8 @@ namespace MenuEcalculos
 
                         Qtde = salario / salarioMinimo;
 
-                        Console.WriteLine("\n{1}, você ganha {0} salarios minimos", Qtde.ToString("F1"), nome);
+                        Console.WriteLine("\n{1}, você ganha {0} salarios minimos",
+                            Qtde.ToString("F1"), nome);
                         Console.WriteLine("\n \n \nPressione Enter para voltar ao Menu");
                         Console.ReadKey();
                         Console.Clear();
@@ -84,13 +88,65 @@ namespace MenuEcalculos
                         result = Convert.ToInt32(Math.Pow(raio, exp));
                         volume = div * pi * result;
 
-                        Console.WriteLine("\n{1}, o volume do raio é {0}", volume.ToString("F1"), nome);
+                        Console.WriteLine("\n{1}, o volume do raio é {0}",
+                            volume.ToString("F1"), nome);
 
                         Console.WriteLine("\n \n \nPressione Enter para voltar ao Menu");
                         Console.ReadKey();
                         Console.Clear();
                         break;
+
+                    case 4:
+                        {
+                            double n1, n2, n3, notas, exame, media, nmedia, res = 3;
+
+                            Console.Write("\nDigite a 1ª nota: ");
+                            n1 = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Digite a 2ª nota: ");
+                            n2 = Convert.ToDouble(Console.ReadLine());
+                            Console.Write("Digite a 3ª nota: ");
+                            n3 = Convert.ToDouble(Console.ReadLine());
+
+                            notas = n1 + n2 + n3;
+                            media = notas / res;
+
+                            if (media >= 7)
+                            {
+                                Console.WriteLine("\nSua média é {0}", media.ToString("F1"));
+                                Console.WriteLine("\nAprovado");
+
+                            }
+                            else {
+
+                                Console.WriteLine("\nSua média é {0}", media.ToString("F1"));
+                                Console.Write("\nDigite a nota do novo exame: ");
+                                exame = Convert.ToDouble(Console.ReadLine());
+
+                                nmedia = media + exame / 2;
+
+
+                                if (nmedia >= 5)
+                                {
+                                    Console.WriteLine("\n \nSua nova média é {0}",
+                                        nmedia.ToString("F1"));
+                                    Console.WriteLine("\nAprovado em exame");
+
+                                }
+                                else {
+                                    Console.WriteLine("\nSua nova média é {0}",
+                                        nmedia.ToString("F1"));
+                                    Console.WriteLine("\nReprovado");
+                                }
+
+                            }
+                        }
+                        Console.WriteLine("\n \n \nPressione Enter para voltar ao Menu");
+                        Console.ReadKey();
+                        Console.Clear();
+                        break;
+
                 }
+
 
             } while (true);
         }
