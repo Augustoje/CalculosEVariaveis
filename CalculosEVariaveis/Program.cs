@@ -36,24 +36,20 @@ namespace MenuEcalculos
                         Console.Write("Digite seu peso: ");
                         peso = Convert.ToDouble(Console.ReadLine());
 
-
                         imc = peso / (altura * altura);
 
                         Console.WriteLine("\nIMC {0}", imc.ToString("F1"));
 
                         Console.Write("\n{0}, voce está", nome);
 
-                        if (imc < 20)
-                        {
+                        if (imc < 20) {
                             Console.WriteLine(" abaixo do Peso!!!");
                         }
 
-                        if (imc >= 20 && imc < 25)
-                        {
+                        if (imc >= 20 && imc < 25) {
                             Console.WriteLine(" com o peso Ideal!!!");
                         }
-                        else if (imc >= 25)
-                        {
+                        else if (imc >= 25) {
                             Console.WriteLine(" acima do Peso!!!");
                         }
                         Console.WriteLine("\n \n \nPressione Enter para voltar ao Menu");
@@ -82,12 +78,10 @@ namespace MenuEcalculos
 
                         float div = 4f / 3f, pi = 3.14f, raio, exp = 3, result, volume;
 
-
                         Console.WriteLine("Informe o valor do raio: ");
                         raio = Convert.ToInt32(Console.ReadLine());
 
                         result = Convert.ToInt32(Math.Pow(raio, exp));
-
                         volume = div * pi * result;
 
                         Console.WriteLine("\n{1}, o volume do raio é {0}", volume.ToString("F1"), nome);
@@ -96,9 +90,6 @@ namespace MenuEcalculos
                         Console.ReadKey();
                         Console.Clear();
                         break;
-
-
-
                 }
 
             } while (true);
