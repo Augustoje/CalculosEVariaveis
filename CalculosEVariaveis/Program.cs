@@ -50,8 +50,7 @@ namespace MenuEcalculos
                         if (imc >= 20 && imc < 25)
                         {
                             Console.WriteLine(" com o peso Ideal!!!");
-                        }
-                        else if (imc >= 25)
+                        } else if (imc >= 25)
                         {
                             Console.WriteLine(" acima do Peso!!!");
                         }
@@ -113,7 +112,8 @@ namespace MenuEcalculos
                                 Console.WriteLine("\nSua média é {0:F1}", media);
                                 Console.WriteLine("\nAprovado");
 
-                            } else {
+                            } else
+                            {
 
                                 Console.WriteLine("\nSua média é {0:F1}", media);
                                 Console.Write("\nDigite a nota do novo exame: ");
@@ -121,13 +121,13 @@ namespace MenuEcalculos
 
                                 nmedia = (media + exame) / 2;
 
-
                                 if (nmedia >= 5)
                                 {
                                     Console.WriteLine("\n \nSua nova média é {0:F1}", nmedia);
                                     Console.WriteLine("\nAprovado em exame");
 
-                                } else {
+                                } else
+                                {
                                     Console.WriteLine("\nSua nova média é {0:F1}", nmedia);
                                     Console.WriteLine("\nReprovado");
                                 }
@@ -140,8 +140,6 @@ namespace MenuEcalculos
                         break;
 
                 }
-
-
             } while (true);
         }
     }
