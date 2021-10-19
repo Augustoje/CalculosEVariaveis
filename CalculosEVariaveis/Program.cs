@@ -71,8 +71,7 @@ namespace MenuEcalculos
 
                         Qtde = salario / salarioMinimo;
 
-                        Console.WriteLine("\n{1}, você ganha {0} salarios minimos",
-                            Qtde.ToString("F1"), nome);
+                        Console.WriteLine("\n{1}, você ganha {0:F1} salarios minimos", Qtde, nome);
                         Console.WriteLine("\n \n \nPressione Enter para voltar ao Menu");
                         Console.ReadKey();
                         Console.Clear();
@@ -88,8 +87,7 @@ namespace MenuEcalculos
                         result = Convert.ToInt32(Math.Pow(raio, exp));
                         volume = div * pi * result;
 
-                        Console.WriteLine("\n{1}, o volume do raio é {0}",
-                            volume.ToString("F1"), nome);
+                        Console.WriteLine("\n{1}, o volume do raio é {0:F1}", volume, nome);
 
                         Console.WriteLine("\n \n \nPressione Enter para voltar ao Menu");
                         Console.ReadKey();
@@ -112,29 +110,25 @@ namespace MenuEcalculos
 
                             if (media >= 7)
                             {
-                                Console.WriteLine("\nSua média é {0}", media.ToString("F1"));
+                                Console.WriteLine("\nSua média é {0:F1}", media);
                                 Console.WriteLine("\nAprovado");
 
-                            }
-                            else {
+                            } else {
 
-                                Console.WriteLine("\nSua média é {0}", media.ToString("F1"));
+                                Console.WriteLine("\nSua média é {0:F1}", media);
                                 Console.Write("\nDigite a nota do novo exame: ");
                                 exame = Convert.ToDouble(Console.ReadLine());
 
-                                nmedia = media + exame / 2;
+                                nmedia = (media + exame) / 2;
 
 
                                 if (nmedia >= 5)
                                 {
-                                    Console.WriteLine("\n \nSua nova média é {0}",
-                                        nmedia.ToString("F1"));
+                                    Console.WriteLine("\n \nSua nova média é {0:F1}", nmedia);
                                     Console.WriteLine("\nAprovado em exame");
 
-                                }
-                                else {
-                                    Console.WriteLine("\nSua nova média é {0}",
-                                        nmedia.ToString("F1"));
+                                } else {
+                                    Console.WriteLine("\nSua nova média é {0:F1}", nmedia);
                                     Console.WriteLine("\nReprovado");
                                 }
 
