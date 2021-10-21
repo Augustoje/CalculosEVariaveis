@@ -1,11 +1,16 @@
 ﻿using System;
-
-namespace MenuEcalculos
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace CalculosEVariaveis
 {
     class Program
     {
-        static void Main(string[] args)
+
+        public static void Main(string[] args)
         {
+
             int opcao;
             string nome;
 
@@ -139,8 +144,24 @@ namespace MenuEcalculos
                         Console.Clear();
                         break;
 
+                    case 5:
+                        {
+                            ProgramAnimal programAnimal = new ProgramAnimal();
+
+                            programAnimal.Start();
+                        }
+
+                        Console.WriteLine("\n \n \nPressione Enter para voltar ao Menu");
+                        Console.ReadKey();
+                        Console.Clear();
+                        break;
+
+                    default:
+                        Console.WriteLine("Informe uma opção valida!");
+                        break;
                 }
             } while (true);
         }
+
     }
 }
